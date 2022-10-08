@@ -173,6 +173,7 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   send_string_2_dbg_uart ( "Hello! Test_Swarm_004_L432KC started\n" ) ;
+  HAL_Delay ( 15000 ) ;
   green_toggle () ;
   tim_init () ;
   m138_init () ;
