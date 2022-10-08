@@ -67,7 +67,7 @@ char             						swarm_uart_rx_buff[SWARM_UART_RX_MAX_BUFF_SIZE] ;
 char             						swarm_uart_tx_buff[SWARM_UART_TX_MAX_BUFF_SIZE] ;
 char             						dbg_uart_tx_buff[DBG_UART_TX_MAX_BUFF_SIZE] ;
 uint8_t									tim_on = 0 ;
-uint8_t									answer_from_swarm = 1 ; // To jest bardzo ważne, bo 0 oznacza otwarty dma, którego nie można otwierać drugi raz, bo się zawiesi
+uint8_t									answer_from_swarm = 0 ; // To jest bardzo ważne, bo 0 oznacza otwarty dma, którego nie można otwierać drugi raz, bo się zawiesi
 uint8_t									m138_init_status_reg = 0 ; // b0: dev_id, b1: rt rate=0, b2: pw rate = 0, b3: dt rate = 0, b4: gs rate = 0, b5: gj rate = 0, b6: gn rate = 0,
 uint32_t								m138_dev_id = 0 ;
 float									m138_voltage = 0 ;
@@ -91,23 +91,24 @@ const char*			gn_q_rate_at			= "$GN ?" ;
 const char*			gn_mostrecent_at		= "$GN @" ;
 const char*			sl_at_comm				= "$SL S=10" ;
 // SWARM AT Answers
-const char*         cs_answer				= "$CS DI=0x" ;
-const char*         rt_ok_answer			= "$RT OK*22" ;
-const char*         rt_0_answer				= "$RT 0*16" ;
-const char*         pw_ok_answer			= "$PW OK*23" ;
-const char*         pw_0_answer				= "$PW 0*17" ;
-const char*         pw_mostrecent_answer	= "$PW " ;
-const char*         dt_ok_answer			= "$DT OK*34" ;
-const char*         dt_0_answer				= "$DT 0*00" ;
-const char*         gs_ok_answer			= "$GS OK*30" ;
-const char*         gs_0_answer				= "$GS 0*04" ;
-const char*         gj_ok_answer			= "$GJ OK*29" ;
-const char*         gj_0_answer				= "$GJ 0*1d" ;
-const char*         gn_ok_answer			= "$GN OK*2d" ;
-const char*         gn_0_answer				= "$GN 0*19" ;
-const char*         gn_mostrecent_answer	= "$GN " ;
-const char*			td_ok_answer			= "$TD OK," ;
+const char*         cs_answer				= "$CS DI=0x\0" ;
+const char*         rt_ok_answer			= "$RT OK*22\0" ;
+const char*         rt_0_answer				= "$RT 0*16\0" ;
+const char*         pw_ok_answer			= "$PW OK*23\0" ;
+const char*         pw_0_answer				= "$PW 0*17\0" ;
+const char*         pw_mostrecent_answer	= "$PW \0" ;
+const char*         dt_ok_answer			= "$DT OK*34\0" ;
+const char*         dt_0_answer				= "$DT 0*00\0" ;
+const char*         gs_ok_answer			= "$GS OK*30\0" ;
+const char*         gs_0_answer				= "$GS 0*04\0" ;
+const char*         gj_ok_answer			= "$GJ OK*29\0" ;
+const char*         gj_0_answer				= "$GJ 0*1d\0" ;
+const char*         gn_ok_answer			= "$GN OK*2d\0" ;
+const char*         gn_0_answer				= "$GN 0*19\0" ;
+const char*         gn_mostrecent_answer	= "$GN \0" ;
+const char*			td_ok_answer			= "$TD OK,\0" ;
 const char*         sl_ok_answer			= "$SL OK*3b\0" ;
+const char*         sl_wake_answer			= "$SL WAKE\0" ;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -122,6 +123,7 @@ static void MX_TIM6_Init(void);
 uint8_t 			store_m138_dev_id 			( uint32_t* , char* ) ;
 uint8_t 			store_m138_voltage 			( float* , char* ) ;
 uint8_t				store_m138_fix				( char* , char* ) ;
+void 				reset_m138_var 				( void ) ;
 void				m138_init 					( void ) ;
 uint8_t				swarm_cc 					( const char* , const char* ) ;
 void 				tim_init 					( void ) ;
@@ -173,8 +175,6 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   send_string_2_dbg_uart ( "Hello! Test_Swarm_004_L432KC started\n" ) ;
-  HAL_Delay ( 15000 ) ;
-  green_toggle () ;
   tim_init () ;
   m138_init () ;
 
@@ -190,17 +190,18 @@ int main(void)
 		  store_m138_voltage ( &m138_voltage , swarm_uart_rx_buff ) ;
 	  if ( swarm_cc ( gn_mostrecent_at , gn_mostrecent_answer ) )
 		  store_m138_fix ( m138_fix , swarm_uart_rx_buff ) ;
-	  sprintf ( swarm_uart_tx_buff , "$TD HD=60,\"%u;%s\"\n" , (unsigned int) m138_dev_id , m138_fix ) ;
-	  send_string_2_dbg_uart ( swarm_uart_tx_buff ) ;
+	  sprintf ( dbg_uart_tx_buff , "$TD HD=60,\"%u;%s\"\n" , (unsigned int) m138_dev_id , m138_fix ) ;
+	  send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+/*
 	  if ( swarm_cc ( sl_at_comm , sl_ok_answer ) )
 	  {
-		  sprintf ( swarm_uart_tx_buff , "Swarm went sleep for 10s.\n" ) ;
-		  send_string_2_dbg_uart ( swarm_uart_tx_buff ) ;
-		  //sprintf ( swarm_uart_tx_buff , "SMT32 will STOP0.\n" ) ;
-		  //send_string_2_dbg_uart ( swarm_uart_tx_buff ) ;
-		  //HAL_PWREx_EnterSTOP0Mode ( PWR_STOPENTRY_WFI ) ;
+		  sprintf ( dbg_uart_tx_buff , "Swarm went sleep for 10s.\n" ) ;
+		  send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 	  }
-	  HAL_Delay ( 10000 ) ;
+*/
+	  reset_m138_var () ;
+	  HAL_Delay ( 12000 ) ;
+	  //HAL_UART_Receive ( &huart1 , (uint8_t*) swarm_uart_rx_buff , SWARM_UART_RX_MAX_BUFF_SIZE , 1000 ) ;
 	  //HAL_PWREx_EnterSTOP2Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP1Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP0Mode ( PWR_STOPENTRY_WFI ) ;
@@ -488,7 +489,76 @@ uint8_t store_m138_fix ( char* d , char* s )
 	d[l] = '\0' ;
 	return 1 ;
 }
+void reset_m138_var ()
+{
+	m138_voltage = 0 ;
+	m138_fix[0] = '\0' ;
+}
+/*
+uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
+{
+	uint8_t try ;
+	uint8_t cs = nmea_checksum ( at_command , strlen ( at_command ) ) ;
+	sprintf ( swarm_uart_tx_buff , "%s*%02x\n" , at_command , cs ) ;
 
+	for ( try = 0 ; try < 5 ; try++ )
+	{
+		receive_swarm_uart_dma () ;
+		tim_start () ;
+		send_string_2_swarm_uart ( swarm_uart_tx_buff ) ;
+		while ( tim_on )
+			if ( strncmp ( swarm_uart_rx_buff , expected_answer , strlen ( expected_answer ) ) == 0 )
+			{
+				sprintf ( dbg_uart_tx_buff , "try no. %u success for %s\n" , try , at_command ) ;
+				send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+				return 1 ;
+			}
+			else
+				break ;
+	}
+	sprintf ( dbg_uart_tx_buff , "%s %s\n" , (char*) expected_answer , "not received." ) ;
+	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+	return 0 ;
+}
+*/
+uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
+{
+	uint8_t try ;
+	uint8_t cs = nmea_checksum ( at_command , strlen ( at_command ) ) ;
+	sprintf ( swarm_uart_tx_buff , "%s*%02x\n" , at_command , cs ) ;
+
+	for ( try = 0 ; try < 5 ; try++ )
+	{
+		if ( answer_from_swarm == 0 )
+			if ( receive_swarm_uart_dma () != HAL_OK )
+			{
+				sprintf ( dbg_uart_tx_buff , "try no. %u receive_swarm_uart_dma () != HAL_OK for %s\n" , try , at_command ) ;
+				send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+			}
+		tim_start () ;
+		send_string_2_swarm_uart ( swarm_uart_tx_buff ) ;
+		while ( tim_on )
+			if ( answer_from_swarm == 1 )
+			{
+				sprintf ( dbg_uart_tx_buff , "try no. %u answer_from_swarm = 1 for %s\n" , try , at_command ) ;
+				send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+				answer_from_swarm = 0 ;
+				if ( strncmp ( swarm_uart_rx_buff , expected_answer , strlen ( expected_answer ) ) == 0 )
+				{
+					sprintf ( dbg_uart_tx_buff , "try no. %u success for %s\n" , try , at_command ) ;
+					send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+					return 1 ;
+				}
+				else
+					break ;
+			}
+	}
+	sprintf ( dbg_uart_tx_buff , "%s %s\n" , (char*) expected_answer , "not received." ) ;
+	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+	return 0 ;
+}
+
+/*
 uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 {
 	uint8_t try ;
@@ -522,7 +592,7 @@ uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 	send_string_2_dbg_uart ( swarm_uart_tx_buff ) ;
 	return 0 ;
 }
-
+*/
 void m138_init ()
 {
 	if ( swarm_cc ( cs_at , cs_answer ) )
@@ -547,19 +617,10 @@ void m138_init ()
 		if ( swarm_cc ( gn_q_rate_at , gn_0_answer ) )
 			m138_init_status_reg = m138_init_status_reg | 64 ;
 
-	sprintf ( swarm_uart_tx_buff , "%s%u\n" , "m138_init_status_reg = " , m138_init_status_reg ) ;
-	send_string_2_dbg_uart ( swarm_uart_tx_buff ) ;
+	sprintf ( dbg_uart_tx_buff , "%s%u\n" , "m138_init_status_reg = " , m138_init_status_reg ) ;
+	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 }
 
-void tim_init ()
-{
-	__HAL_TIM_CLEAR_IT ( &TIM_HANDLER , TIM_IT_UPDATE ) ;
-}
-void tim_start ()
-{
-	HAL_TIM_Base_Start_IT ( &TIM_HANDLER ) ;
-	tim_on = 1 ;
-}
 void green_toggle ()
 {
 	HAL_GPIO_TogglePin ( GREEN_GPIO_Port , GREEN_Pin ) ;
@@ -585,6 +646,15 @@ uint8_t nmea_checksum ( const char *message , size_t len )
 	return cs;
 }
 
+void tim_init ()
+{
+	__HAL_TIM_CLEAR_IT ( &TIM_HANDLER , TIM_IT_UPDATE ) ;
+}
+void tim_start ()
+{
+	HAL_TIM_Base_Start_IT ( &TIM_HANDLER ) ;
+	tim_on = 1 ;
+}
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef *htim )
 {
 	if ( htim->Instance == TIM_INSTANCE )
@@ -596,7 +666,6 @@ void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef *htim )
 
 HAL_StatusTypeDef receive_swarm_uart_dma ()
 {
-	answer_from_swarm = 0 ;
 	HAL_StatusTypeDef r = HAL_UARTEx_ReceiveToIdle_DMA ( SWARM_UART_HANDLER , (uint8_t*) swarm_uart_rx_buff , SWARM_UART_RX_MAX_BUFF_SIZE ) ;
 	__HAL_DMA_DISABLE_IT ( &hdma_usart1_rx, DMA_IT_HT ) ; //Disable Half Transfer interrupt.
 	return r ;
@@ -606,8 +675,8 @@ void HAL_UARTEx_RxEventCallback ( UART_HandleTypeDef *huart , uint16_t Size )
 {
     if ( huart->Instance == SWARM_UART_INSTANCE )
     {
-    	swarm_uart_rx_buff[Size] = '\0' ;
     	answer_from_swarm = 1 ;
+    	swarm_uart_rx_buff[Size] = 0 ;
     }
 }
 /* USER CODE END 4 */
