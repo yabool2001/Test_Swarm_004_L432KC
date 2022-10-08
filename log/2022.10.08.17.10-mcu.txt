@@ -4490,3 +4490,403 @@
 [2022-10-08 23:26:29.622] try no. 0 answer_from_swarm = 1 for $GN @
 [2022-10-08 23:26:29.637] try no. 0 success for $GN @
 [2022-10-08 23:26:29.637] $TD HD=60,"13361;52.2783,20.8093,100,347,2"
+[2022-10-08 23:26:41.658] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:26:41.661] try no. 0 success for $PW @
+[2022-10-08 23:26:41.668] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:26:41.672] try no. 0 success for $GN @
+[2022-10-08 23:26:41.675] $TD HD=60,"13361;52.2783,20.8092,98,347,1"
+[2022-10-08 23:26:53.691] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:26:53.695] try no. 0 success for $PW @
+[2022-10-08 23:26:53.702] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:26:53.707] try no. 0 success for $GN @
+[2022-10-08 23:26:53.710] $TD HD=60,"13361;52.2782,20.8092,93,347,0"
+[2022-10-08 23:27:05.724] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:27:05.728] try no. 0 success for $PW @
+[2022-10-08 23:27:05.736] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:27:05.740] try no. 0 success for $GN @
+[2022-10-08 23:27:05.742] $TD HD=60,"13361;52.2782,20.8092,90,347,0"
+[2022-10-08 23:27:17.758] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:27:17.763] try no. 0 success for $PW @
+[2022-10-08 23:27:17.769] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:27:17.774] try no. 0 success for $GN @
+[2022-10-08 23:27:17.776] $TD HD=60,"13361;52.2782,20.8093,87,347,2"
+[2022-10-08 23:27:29.792] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:27:29.795] try no. 0 success for $PW @
+[2022-10-08 23:27:29.803] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:27:29.807] try no. 0 success for $GN @
+[2022-10-08 23:27:29.810] $TD HD=60,"13361;52.2782,20.8093,86,347,2"
+[2022-10-08 23:27:41.825] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:27:41.830] try no. 0 success for $PW @
+[2022-10-08 23:27:41.836] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:27:41.841] try no. 0 success for $GN @
+[2022-10-08 23:27:41.843] $TD HD=60,"13361;52.2783,20.8093,86,347,2"
+[2022-10-08 23:27:53.860] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:27:53.864] try no. 0 success for $PW @
+[2022-10-08 23:27:53.870] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:27:53.875] try no. 0 success for $GN @
+[2022-10-08 23:27:53.877] $TD HD=60,"13361;52.2783,20.8093,86,347,1"
+[2022-10-08 23:28:05.893] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:28:05.897] try no. 0 success for $PW @
+[2022-10-08 23:28:05.903] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:28:05.908] try no. 0 success for $GN @
+[2022-10-08 23:28:05.911] $TD HD=60,"13361;52.2782,20.8094,88,135,7"
+[2022-10-08 23:28:17.926] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:28:17.931] try no. 0 success for $PW @
+[2022-10-08 23:28:17.937] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:28:17.943] try no. 0 success for $GN @
+[2022-10-08 23:28:17.946] $TD HD=60,"13361;52.2782,20.8092,88,135,1"
+[2022-10-08 23:28:29.961] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:28:29.965] try no. 0 success for $PW @
+[2022-10-08 23:28:29.972] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:28:29.977] try no. 0 success for $GN @
+[2022-10-08 23:28:29.979] $TD HD=60,"13361;52.2782,20.8092,88,135,1"
+[2022-10-08 23:28:41.995] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:28:41.999] try no. 0 success for $PW @
+[2022-10-08 23:28:42.005] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:28:42.009] try no. 0 success for $GN @
+[2022-10-08 23:28:42.012] $TD HD=60,"13361;52.2782,20.8092,89,135,1"
+[2022-10-08 23:28:54.028] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:28:54.032] try no. 0 success for $PW @
+[2022-10-08 23:28:54.038] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:28:54.043] try no. 0 success for $GN @
+[2022-10-08 23:28:54.046] $TD HD=60,"13361;52.2781,20.8091,90,135,3"
+[2022-10-08 23:29:06.062] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:29:06.067] try no. 0 success for $PW @
+[2022-10-08 23:29:06.073] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:29:06.078] try no. 0 success for $GN @
+[2022-10-08 23:29:06.081] $TD HD=60,"13361;52.2782,20.8092,92,194,1"
+[2022-10-08 23:29:18.096] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:29:18.101] try no. 0 success for $PW @
+[2022-10-08 23:29:18.106] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:29:18.111] try no. 0 success for $GN @
+[2022-10-08 23:29:18.115] $TD HD=60,"13361;52.2782,20.8092,97,194,2"
+[2022-10-08 23:29:30.129] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:29:30.134] try no. 0 success for $PW @
+[2022-10-08 23:29:30.139] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:29:30.145] try no. 0 success for $GN @
+[2022-10-08 23:29:30.148] $TD HD=60,"13361;52.2781,20.8092,103,194,2"
+[2022-10-08 23:29:42.163] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:29:42.167] try no. 0 success for $PW @
+[2022-10-08 23:29:42.174] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:29:42.180] try no. 0 success for $GN @
+[2022-10-08 23:29:42.182] $TD HD=60,"13361;52.2781,20.8092,99,194,0"
+[2022-10-08 23:29:54.197] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:29:54.201] try no. 0 success for $PW @
+[2022-10-08 23:29:54.208] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:29:54.212] try no. 0 success for $GN @
+[2022-10-08 23:29:54.215] $TD HD=60,"13361;52.2781,20.8091,106,194,3"
+[2022-10-08 23:30:06.229] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:30:06.234] try no. 0 success for $PW @
+[2022-10-08 23:30:06.240] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:30:06.245] try no. 0 success for $GN @
+[2022-10-08 23:30:06.248] $TD HD=60,"13361;52.2781,20.8090,111,226,9"
+[2022-10-08 23:30:18.264] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:30:18.269] try no. 0 success for $PW @
+[2022-10-08 23:30:18.275] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:30:18.279] try no. 0 success for $GN @
+[2022-10-08 23:30:18.282] $TD HD=60,"13361;52.2782,20.8091,112,344,4"
+[2022-10-08 23:30:30.298] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:30:30.302] try no. 0 success for $PW @
+[2022-10-08 23:30:30.309] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:30:30.312] try no. 0 success for $GN @
+[2022-10-08 23:30:30.315] $TD HD=60,"13361;52.2783,20.8092,109,8,2"
+[2022-10-08 23:30:42.321] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:30:42.321] try no. 0 success for $PW @
+[2022-10-08 23:30:42.342] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:30:42.348] try no. 0 success for $GN @
+[2022-10-08 23:30:42.350] $TD HD=60,"13361;52.2784,20.8093,104,6,4"
+[2022-10-08 23:30:54.358] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:30:54.358] try no. 0 success for $PW @
+[2022-10-08 23:30:54.376] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:30:54.378] try no. 0 success for $GN @
+[2022-10-08 23:30:54.378] $TD HD=60,"13361;52.2785,20.8093,104,6,2"
+[2022-10-08 23:31:06.400] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:31:06.400] try no. 0 success for $PW @
+[2022-10-08 23:31:06.400] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:31:06.400] try no. 0 success for $GN @
+[2022-10-08 23:31:06.416] $TD HD=60,"13361;52.2784,20.8093,106,6,1"
+[2022-10-08 23:31:18.428] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:31:18.428] try no. 0 success for $PW @
+[2022-10-08 23:31:18.443] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:31:18.443] try no. 0 success for $GN @
+[2022-10-08 23:31:18.443] $TD HD=60,"13361;52.2783,20.8092,106,6,2"
+[2022-10-08 23:31:30.453] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:31:30.468] try no. 0 success for $PW @
+[2022-10-08 23:31:30.468] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:31:30.468] try no. 0 success for $GN @
+[2022-10-08 23:31:30.484] $TD HD=60,"13361;52.2782,20.8091,105,6,1"
+[2022-10-08 23:31:42.489] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:31:42.505] try no. 0 success for $PW @
+[2022-10-08 23:31:42.512] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:31:42.516] try no. 0 success for $GN @
+[2022-10-08 23:31:42.520] $TD HD=60,"13361;52.2782,20.8091,104,6,0"
+[2022-10-08 23:31:54.531] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:31:54.531] try no. 0 success for $PW @
+[2022-10-08 23:31:54.531] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:31:54.546] try no. 0 success for $GN @
+[2022-10-08 23:31:54.546] $TD HD=60,"13361;52.2782,20.8091,103,6,1"
+[2022-10-08 23:32:06.559] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:32:06.559] try no. 0 success for $PW @
+[2022-10-08 23:32:06.575] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:32:06.575] try no. 0 success for $GN @
+[2022-10-08 23:32:06.575] $TD HD=60,"13361;52.2782,20.8091,102,6,1"
+[2022-10-08 23:32:18.602] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:32:18.607] try no. 0 success for $PW @
+[2022-10-08 23:32:18.613] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:32:18.616] try no. 0 success for $GN @
+[2022-10-08 23:32:18.619] $TD HD=60,"13361;52.2782,20.8091,99,6,1"
+[2022-10-08 23:32:30.636] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:32:30.640] try no. 0 success for $PW @
+[2022-10-08 23:32:30.646] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:32:30.651] try no. 0 success for $GN @
+[2022-10-08 23:32:30.654] $TD HD=60,"13361;52.2782,20.8091,93,6,1"
+[2022-10-08 23:32:42.668] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:32:42.673] try no. 0 success for $PW @
+[2022-10-08 23:32:42.679] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:32:42.684] try no. 0 success for $GN @
+[2022-10-08 23:32:42.686] $TD HD=60,"13361;52.2783,20.8087,71,274,3"
+[2022-10-08 23:32:54.702] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:32:54.708] try no. 0 success for $PW @
+[2022-10-08 23:32:54.715] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:32:54.718] try no. 0 success for $GN @
+[2022-10-08 23:32:54.721] $TD HD=60,"13361;52.2782,20.8090,81,274,1"
+[2022-10-08 23:33:06.736] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:33:06.740] try no. 0 success for $PW @
+[2022-10-08 23:33:06.747] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:33:06.751] try no. 0 success for $GN @
+[2022-10-08 23:33:06.754] $TD HD=60,"13361;52.2782,20.8091,81,274,0"
+[2022-10-08 23:33:18.770] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:33:18.775] try no. 0 success for $PW @
+[2022-10-08 23:33:18.781] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:33:18.785] try no. 0 success for $GN @
+[2022-10-08 23:33:18.789] $TD HD=60,"13361;52.2782,20.8091,88,274,1"
+[2022-10-08 23:33:30.804] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:33:30.809] try no. 0 success for $PW @
+[2022-10-08 23:33:30.815] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:33:30.820] try no. 0 success for $GN @
+[2022-10-08 23:33:30.822] $TD HD=60,"13361;52.2781,20.8090,110,274,1"
+[2022-10-08 23:33:42.838] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:33:42.841] try no. 0 success for $PW @
+[2022-10-08 23:33:42.849] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:33:42.853] try no. 0 success for $GN @
+[2022-10-08 23:33:42.856] $TD HD=60,"13361;52.2781,20.8090,120,274,2"
+[2022-10-08 23:33:54.872] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:33:54.876] try no. 0 success for $PW @
+[2022-10-08 23:33:54.882] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:33:54.887] try no. 0 success for $GN @
+[2022-10-08 23:33:54.890] $TD HD=60,"13361;52.2782,20.8090,113,274,3"
+[2022-10-08 23:34:06.905] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:34:06.910] try no. 0 success for $PW @
+[2022-10-08 23:34:06.916] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:34:06.921] try no. 0 success for $GN @
+[2022-10-08 23:34:06.923] $TD HD=60,"13361;52.2782,20.8092,107,323,1"
+[2022-10-08 23:34:18.939] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:34:18.943] try no. 0 success for $PW @
+[2022-10-08 23:34:18.957] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:34:18.959] try no. 0 success for $GN @
+[2022-10-08 23:34:18.959] $TD HD=60,"13361;52.2783,20.8092,106,323,0"
+[2022-10-08 23:34:30.972] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:34:30.977] try no. 0 success for $PW @
+[2022-10-08 23:34:30.984] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:34:30.988] try no. 0 success for $GN @
+[2022-10-08 23:34:30.993] $TD HD=60,"13361;52.2782,20.8092,106,323,1"
+[2022-10-08 23:34:43.007] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:34:43.012] try no. 0 success for $PW @
+[2022-10-08 23:34:43.018] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:34:43.022] try no. 0 success for $GN @
+[2022-10-08 23:34:43.024] $TD HD=60,"13361;52.2783,20.8091,100,323,6"
+[2022-10-08 23:34:55.040] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:34:55.044] try no. 0 success for $PW @
+[2022-10-08 23:34:55.053] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:34:55.055] try no. 0 success for $GN @
+[2022-10-08 23:34:55.058] $TD HD=60,"13361;52.2782,20.8090,94,206,5"
+[2022-10-08 23:35:07.074] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:35:07.078] try no. 0 success for $PW @
+[2022-10-08 23:35:07.084] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:35:07.090] try no. 0 success for $GN @
+[2022-10-08 23:35:07.092] $TD HD=60,"13361;52.2782,20.8090,91,206,3"
+[2022-10-08 23:35:19.108] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:35:19.113] try no. 0 success for $PW @
+[2022-10-08 23:35:19.119] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:35:19.123] try no. 0 success for $GN @
+[2022-10-08 23:35:19.126] $TD HD=60,"13361;52.2782,20.8091,96,206,2"
+[2022-10-08 23:35:31.142] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:35:31.146] try no. 0 success for $PW @
+[2022-10-08 23:35:31.152] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:35:31.158] try no. 0 success for $GN @
+[2022-10-08 23:35:31.160] $TD HD=60,"13361;52.2783,20.8091,92,206,2"
+[2022-10-08 23:35:43.175] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:35:43.180] try no. 0 success for $PW @
+[2022-10-08 23:35:43.186] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:35:43.190] try no. 0 success for $GN @
+[2022-10-08 23:35:43.193] $TD HD=60,"13361;52.2782,20.8091,95,206,2"
+[2022-10-08 23:35:55.209] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:35:55.214] try no. 0 success for $PW @
+[2022-10-08 23:35:55.220] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:35:55.224] try no. 0 success for $GN @
+[2022-10-08 23:35:55.227] $TD HD=60,"13361;52.2782,20.8091,94,206,2"
+[2022-10-08 23:36:07.243] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:36:07.249] try no. 0 success for $PW @
+[2022-10-08 23:36:07.253] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:36:07.257] try no. 0 success for $GN @
+[2022-10-08 23:36:07.260] $TD HD=60,"13361;52.2782,20.8091,95,206,1"
+[2022-10-08 23:36:19.276] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:36:19.281] try no. 0 success for $PW @
+[2022-10-08 23:36:19.287] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:36:19.292] try no. 0 success for $GN @
+[2022-10-08 23:36:19.295] $TD HD=60,"13361;52.2782,20.8091,97,206,3"
+[2022-10-08 23:36:31.310] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:36:31.315] try no. 0 success for $PW @
+[2022-10-08 23:36:31.321] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:36:31.325] try no. 0 success for $GN @
+[2022-10-08 23:36:31.327] $TD HD=60,"13361;52.2782,20.8090,100,206,4"
+[2022-10-08 23:36:43.344] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:36:43.349] try no. 0 success for $PW @
+[2022-10-08 23:36:43.355] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:36:43.359] try no. 0 success for $GN @
+[2022-10-08 23:36:43.362] $TD HD=60,"13361;52.2782,20.8090,100,206,0"
+[2022-10-08 23:36:55.378] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:36:55.382] try no. 0 success for $PW @
+[2022-10-08 23:36:55.388] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:36:55.393] try no. 0 success for $GN @
+[2022-10-08 23:36:55.396] $TD HD=60,"13361;52.2782,20.8091,98,206,2"
+[2022-10-08 23:37:07.411] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:37:07.415] try no. 0 success for $PW @
+[2022-10-08 23:37:07.422] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:37:07.427] try no. 0 success for $GN @
+[2022-10-08 23:37:07.428] $TD HD=60,"13361;52.2782,20.8092,95,206,1"
+[2022-10-08 23:37:19.446] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:37:19.450] try no. 0 success for $PW @
+[2022-10-08 23:37:19.456] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:37:19.460] try no. 0 success for $GN @
+[2022-10-08 23:37:19.463] $TD HD=60,"13361;52.2782,20.8092,94,206,1"
+[2022-10-08 23:37:31.480] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:37:31.483] try no. 0 success for $PW @
+[2022-10-08 23:37:31.490] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:37:31.495] try no. 0 success for $GN @
+[2022-10-08 23:37:31.497] $TD HD=60,"13361;52.2782,20.8092,96,206,1"
+[2022-10-08 23:37:43.512] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:37:43.517] try no. 0 success for $PW @
+[2022-10-08 23:37:43.523] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:37:43.530] try no. 0 success for $GN @
+[2022-10-08 23:37:43.530] $TD HD=60,"13361;52.2783,20.8092,99,206,2"
+[2022-10-08 23:37:55.546] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:37:55.551] try no. 0 success for $PW @
+[2022-10-08 23:37:55.557] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:37:55.561] try no. 0 success for $GN @
+[2022-10-08 23:37:55.564] $TD HD=60,"13361;52.2783,20.8092,105,206,1"
+[2022-10-08 23:38:07.580] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:38:07.585] try no. 0 success for $PW @
+[2022-10-08 23:38:07.591] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:38:07.595] try no. 0 success for $GN @
+[2022-10-08 23:38:07.598] $TD HD=60,"13361;52.2783,20.8092,110,206,1"
+[2022-10-08 23:38:19.613] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:38:19.618] try no. 0 success for $PW @
+[2022-10-08 23:38:19.624] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:38:19.631] try no. 0 success for $GN @
+[2022-10-08 23:38:19.632] $TD HD=60,"13361;52.2783,20.8092,110,206,0"
+[2022-10-08 23:38:31.648] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:38:31.653] try no. 0 success for $PW @
+[2022-10-08 23:38:31.658] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:38:31.662] try no. 0 success for $GN @
+[2022-10-08 23:38:31.665] $TD HD=60,"13361;52.2783,20.8093,104,206,3"
+[2022-10-08 23:38:43.681] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:38:43.685] try no. 0 success for $PW @
+[2022-10-08 23:38:43.692] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:38:43.696] try no. 0 success for $GN @
+[2022-10-08 23:38:43.699] $TD HD=60,"13361;52.2783,20.8092,100,206,2"
+[2022-10-08 23:38:55.715] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:38:55.720] try no. 0 success for $PW @
+[2022-10-08 23:38:55.726] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:38:55.730] try no. 0 success for $GN @
+[2022-10-08 23:38:55.733] $TD HD=60,"13361;52.2783,20.8092,98,206,1"
+[2022-10-08 23:39:07.749] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:39:07.753] try no. 0 success for $PW @
+[2022-10-08 23:39:07.760] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:39:07.765] try no. 0 success for $GN @
+[2022-10-08 23:39:07.766] $TD HD=60,"13361;52.2783,20.8093,100,206,1"
+[2022-10-08 23:39:19.783] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:39:19.788] try no. 0 success for $PW @
+[2022-10-08 23:39:19.794] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:39:19.798] try no. 0 success for $GN @
+[2022-10-08 23:39:19.801] $TD HD=60,"13361;52.2783,20.8093,95,206,1"
+[2022-10-08 23:39:31.816] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:39:31.822] try no. 0 success for $PW @
+[2022-10-08 23:39:31.827] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:39:31.831] try no. 0 success for $GN @
+[2022-10-08 23:39:31.835] $TD HD=60,"13361;52.2783,20.8092,89,206,5"
+[2022-10-08 23:39:43.850] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:39:43.854] try no. 0 success for $PW @
+[2022-10-08 23:39:43.861] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:39:43.866] try no. 0 success for $GN @
+[2022-10-08 23:39:43.868] $TD HD=60,"13361;52.2783,20.8092,93,206,0"
+[2022-10-08 23:39:55.884] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:39:55.888] try no. 0 success for $PW @
+[2022-10-08 23:39:55.895] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:39:55.899] try no. 0 success for $GN @
+[2022-10-08 23:39:55.902] $TD HD=60,"13361;52.2784,20.8093,96,206,1"
+[2022-10-08 23:40:07.917] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:40:07.922] try no. 0 success for $PW @
+[2022-10-08 23:40:07.928] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:40:07.933] try no. 0 success for $GN @
+[2022-10-08 23:40:07.936] $TD HD=60,"13361;52.2783,20.8092,97,269,3"
+[2022-10-08 23:40:19.951] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:40:19.955] try no. 0 success for $PW @
+[2022-10-08 23:40:19.962] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:40:19.967] try no. 0 success for $GN @
+[2022-10-08 23:40:19.969] $TD HD=60,"13361;52.2782,20.8091,95,269,3"
+[2022-10-08 23:40:31.985] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:40:31.989] try no. 0 success for $PW @
+[2022-10-08 23:40:31.996] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:40:32.000] try no. 0 success for $GN @
+[2022-10-08 23:40:32.003] $TD HD=60,"13361;52.2782,20.8092,94,269,2"
+[2022-10-08 23:40:44.018] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:40:44.023] try no. 0 success for $PW @
+[2022-10-08 23:40:44.029] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:40:44.033] try no. 0 success for $GN @
+[2022-10-08 23:40:44.036] $TD HD=60,"13361;52.2782,20.8093,99,213,0"
+[2022-10-08 23:40:56.052] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:40:56.057] try no. 0 success for $PW @
+[2022-10-08 23:40:56.063] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:40:56.069] try no. 0 success for $GN @
+[2022-10-08 23:40:56.071] $TD HD=60,"13361;52.2782,20.8093,100,213,0"
+[2022-10-08 23:41:08.085] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:41:08.085] try no. 0 success for $PW @
+[2022-10-08 23:41:08.085] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:41:08.101] try no. 0 success for $GN @
+[2022-10-08 23:41:08.101] $TD HD=60,"13361;52.2782,20.8093,102,213,0"
+[2022-10-08 23:41:20.107] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:41:20.123] try no. 0 success for $PW @
+[2022-10-08 23:41:20.123] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:41:20.123] try no. 0 success for $GN @
+[2022-10-08 23:41:20.139] $TD HD=60,"13361;52.2782,20.8093,101,213,2"
+[2022-10-08 23:41:32.153] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:41:32.155] try no. 0 success for $PW @
+[2022-10-08 23:41:32.155] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:41:32.155] try no. 0 success for $GN @
+[2022-10-08 23:41:32.170] $TD HD=60,"13361;52.2783,20.8093,103,213,2"
+[2022-10-08 23:41:44.174] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:41:44.190] try no. 0 success for $PW @
+[2022-10-08 23:41:44.190] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:41:44.190] try no. 0 success for $GN @
+[2022-10-08 23:41:44.190] $TD HD=60,"13361;52.2783,20.8092,98,298,7"
+[2022-10-08 23:41:56.222] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:41:56.222] try no. 0 success for $PW @
+[2022-10-08 23:41:56.222] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:41:56.222] try no. 0 success for $GN @
+[2022-10-08 23:41:56.238] $TD HD=60,"13361;52.2782,20.8091,90,204,2"
+[2022-10-08 23:42:08.243] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:42:08.259] try no. 0 success for $PW @
+[2022-10-08 23:42:08.259] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:42:08.259] try no. 0 success for $GN @
+[2022-10-08 23:42:08.259] $TD HD=60,"13361;52.2782,20.8091,89,204,1"
+[2022-10-08 23:42:20.279] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:42:20.279] try no. 0 success for $PW @
+[2022-10-08 23:42:20.295] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:42:20.295] try no. 0 success for $GN @
+[2022-10-08 23:42:20.295] $TD HD=60,"13361;52.2782,20.8092,96,204,3"
+[2022-10-08 23:42:32.318] try no. 0 answer_from_swarm = 1 for $PW @
+[2022-10-08 23:42:32.318] try no. 0 success for $PW @
+[2022-10-08 23:42:32.318] try no. 0 answer_from_swarm = 1 for $GN @
+[2022-10-08 23:42:32.333] try no. 0 success for $GN @
+[2022-10-08 23:42:32.333] $TD HD=60,"13361;52.2783,20.8092,96,204,1"
