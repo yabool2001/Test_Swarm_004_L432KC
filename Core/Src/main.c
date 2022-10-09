@@ -1,5 +1,6 @@
 /* USER CODE BEGIN Header */
 /**
+ * Actual: https://github.com/yabool2001/Test_Swarm_004_L432KC/issues/1
   ******************************************************************************
   * @file           : main.c
   * @brief          : Main program body
@@ -69,47 +70,50 @@ char             						dbg_uart_tx_buff[DBG_UART_TX_MAX_BUFF_SIZE] ;
 uint8_t									tim_on = 0 ;
 uint8_t									answer_from_swarm = 0 ; // To jest bardzo ważne, bo 0 oznacza otwarty dma, którego nie można otwierać drugi raz, bo się zawiesi
 uint8_t									m138_init_status_reg = 0 ; // b0: dev_id, b1: rt rate=0, b2: pw rate = 0, b3: dt rate = 0, b4: gs rate = 0, b5: gj rate = 0, b6: gn rate = 0,
+uint8_t									m138_payload_status_reg = 0 ; // b0: pw, b1: gn ,
 uint32_t								m138_dev_id = 0 ;
 float									m138_voltage = 0 ;
 char									m138_fix[50] ;
 uint8_t									bkpt = 0 ;
 
 // SWARM AT Commands
-const char*			cs_at					= "$CS" ;
-const char*			rt_0_at					= "$RT 0" ;
-const char*			rt_q_rate_at			= "$RT ?" ;
-const char*			pw_0_at					= "$PW 0" ;
-const char*			pw_q_rate_at			= "$PW ?" ;
-const char*			pw_mostrecent_at		= "$PW @" ;
-const char*			dt_0_at					= "$DT 0" ;
-const char*			dt_q_rate_at			= "$DT ?" ;
-const char*			gs_0_at					= "$GS 0" ;
-const char*			gs_q_rate_at			= "$GS ?" ;
-const char*			gj_0_at					= "$GJ 0" ;
-const char*			gj_q_rate_at			= "$GJ ?" ;
-const char*			gn_0_at					= "$GN 0" ;
-const char*			gn_q_rate_at			= "$GN ?" ;
-const char*			gn_mostrecent_at		= "$GN @" ;
-const char*			sl_at_comm				= "$SL S=5" ;
+const char*			cs_at						= "$CS" ;
+const char*			rt_0_at						= "$RT 0" ;
+const char*			rt_q_rate_at				= "$RT ?" ;
+const char*			pw_0_at						= "$PW 0" ;
+const char*			pw_q_rate_at				= "$PW ?" ;
+const char*			pw_mostrecent_at			= "$PW @" ;
+const char*			dt_0_at						= "$DT 0" ;
+const char*			dt_q_rate_at				= "$DT ?" ;
+const char*			gs_0_at						= "$GS 0" ;
+const char*			gs_q_rate_at				= "$GS ?" ;
+const char*			gj_0_at						= "$GJ 0" ;
+const char*			gj_q_rate_at				= "$GJ ?" ;
+const char*			gn_0_at						= "$GN 0" ;
+const char*			gn_q_rate_at				= "$GN ?" ;
+const char*			gn_mostrecent_at			= "$GN @" ;
+const char*			mt_del_all_unsent_at		= "$MT D=U" ;
+char*				sl_at_comm[15] ;
 // SWARM AT Answers
-const char*         cs_answer				= "$CS DI=0x" ;
-const char*         rt_ok_answer			= "$RT OK*22" ;
-const char*         rt_0_answer				= "$RT 0*16" ;
-const char*         pw_ok_answer			= "$PW OK*23" ;
-const char*         pw_0_answer				= "$PW 0*17" ;
-const char*         pw_mostrecent_answer	= "$PW " ;
-const char*         dt_ok_answer			= "$DT OK*34" ;
-const char*         dt_0_answer				= "$DT 0*00" ;
-const char*         gs_ok_answer			= "$GS OK*30" ;
-const char*         gs_0_answer				= "$GS 0*04" ;
-const char*         gj_ok_answer			= "$GJ OK*29" ;
-const char*         gj_0_answer				= "$GJ 0*1d" ;
-const char*         gn_ok_answer			= "$GN OK*2d" ;
-const char*         gn_0_answer				= "$GN 0*19" ;
-const char*         gn_mostrecent_answer	= "$GN " ;
-const char*			td_ok_answer			= "$TD OK," ;
-const char*         sl_ok_answer			= "$SL OK*3b" ;
-const char*         sl_wake_answer			= "$SL WAKE" ;
+const char*         cs_answer					= "$CS DI=0x" ;
+const char*         rt_ok_answer				= "$RT OK*22" ;
+const char*         rt_0_answer					= "$RT 0*16" ;
+const char*         pw_ok_answer				= "$PW OK*23" ;
+const char*         pw_0_answer					= "$PW 0*17" ;
+const char*         pw_mostrecent_answer		= "$PW " ;
+const char*         dt_ok_answer				= "$DT OK*34" ;
+const char*         dt_0_answer					= "$DT 0*00" ;
+const char*         gs_ok_answer				= "$GS OK*30" ;
+const char*         gs_0_answer					= "$GS 0*04" ;
+const char*         gj_ok_answer				= "$GJ OK*29" ;
+const char*         gj_0_answer					= "$GJ 0*1d" ;
+const char*         gn_ok_answer				= "$GN OK*2d" ;
+const char*         gn_0_answer					= "$GN 0*19" ;
+const char*         gn_mostrecent_answer		= "$GN " ;
+const char*         mt_del_all_unsent_answer	= "$MT " ;
+const char*			td_ok_answer				= "$TD OK," ;
+const char*         sl_ok_answer				= "$SL OK*3b" ;
+const char*         sl_wake_answer				= "$SL WAKE" ;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -125,8 +129,13 @@ uint8_t 			store_m138_dev_id 			( uint32_t* , char* ) ;
 uint8_t 			store_m138_voltage 			( float* , char* ) ;
 uint8_t				store_m138_fix				( char* , char* ) ;
 void 				reset_m138_var 				( void ) ;
-void				m138_init 					( void ) ;
+uint8_t				m138_init 					( void ) ;
+uint8_t				m138_payload				( void ) ;
+uint8_t				m138_del_all_unsent			( void ) ;
+uint8_t 			m138_send_message			( void ) ;
+uint8_t 			m138_sleep					( unsigned int ) ;
 uint8_t				swarm_cc 					( const char* , const char* ) ;
+void				set_swarm_uart				( uint8_t ) ;
 void 				tim_init 					( void ) ;
 void 				tim_start 					( void ) ;
 void 				clean_swarm_uart_rx_buff 	( void ) ;
@@ -188,25 +197,16 @@ int main(void)
   {
 	  if ( m138_init_status_reg != M138_INITIALISED )
 		  m138_init () ;
-	  if ( swarm_cc ( pw_mostrecent_at , pw_mostrecent_answer ) )
-		  store_m138_voltage ( &m138_voltage , swarm_uart_rx_buff ) ;
-	  if ( swarm_cc ( gn_mostrecent_at , gn_mostrecent_answer ) )
-		  store_m138_fix ( m138_fix , swarm_uart_rx_buff ) ;
-	  sprintf ( dbg_uart_tx_buff , "$TD HD=60,\"%u;%s\"\n" , (unsigned int) m138_dev_id , m138_fix ) ;
-	  send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
-
-	  if ( swarm_cc ( sl_at_comm , sl_ok_answer ) )
-	  {
-		  sprintf ( dbg_uart_tx_buff , "Swarm went sleep for 5.\n" ) ;
-		  send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
-	  }
-	  __HAL_UART_DISABLE ( SWARM_UART_HANDLER ) ;
-	  bkpt = 1 ;
+	  if ( m138_payload () == 3 )
+		  if ( m138_del_all_unsent () )
+			  m138_send_message () ;
+	  m138_sleep ( 5 ) ;
+	  set_swarm_uart ( 0 ) ;
+	  //bkpt = 1 ;
 	  reset_m138_var () ;
 	  HAL_Delay ( 6000 ) ;
-	  __HAL_UART_ENABLE ( SWARM_UART_HANDLER ) ;
-	  //__HAL_UART_CLEAR_IDLEFLAG ( &huart1 ) ;
-	  //HAL_UART_Receive ( &huart1 , (uint8_t*) swarm_uart_rx_buff , SWARM_UART_RX_MAX_BUFF_SIZE , 1000 ) ; // Nic nie daje.
+	  set_swarm_uart ( 1 ) ;
+
 	  //HAL_PWREx_EnterSTOP2Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP1Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP0Mode ( PWR_STOPENTRY_WFI ) ;
@@ -498,6 +498,15 @@ void reset_m138_var ()
 {
 	m138_voltage = 0 ;
 	m138_fix[0] = '\0' ;
+	m138_payload_status_reg = 0 ;
+}
+
+void set_swarm_uart ( uint8_t on )
+{
+	if ( on )
+		__HAL_UART_ENABLE ( SWARM_UART_HANDLER ) ;
+	else
+		__HAL_UART_DISABLE ( SWARM_UART_HANDLER ) ;
 }
 uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 {
@@ -507,13 +516,12 @@ uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 
 	l = sprintf ( swarm_uart_tx_buff , "%s*%02x\n" , at_command , cs ) ;
 	swarm_uart_rx_buff[0] = '\0' ;
-	swarm_uart_rx_buff[0] = 0 ;
 	//clean_swarm_uart_rx_buff () ;
 	for ( try = 0 ; try < 5 ; try++ )
 	{
 		tim_start () ;
-		if ( bkpt )
-			__NOP () ;
+		/*if ( bkpt )
+			__NOP () ;*/
 		if ( answer_from_swarm == 0 )
 			if ( receive_swarm_uart_dma () != HAL_OK )
 			{
@@ -526,12 +534,12 @@ uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 			if ( answer_from_swarm == 2 )
 			{
 				answer_from_swarm = 0 ;
-				sprintf ( dbg_uart_tx_buff , "try no. %u answer_from_swarm = 2 for %s\n" , try , at_command ) ;
-				send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+				//sprintf ( dbg_uart_tx_buff , "try no. %u answer_from_swarm = 2 for %s\n" , try , at_command ) ;
+				//send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 				if ( strncmp ( swarm_uart_rx_buff , expected_answer , strlen ( expected_answer ) ) == 0 )
 				{
-					sprintf ( dbg_uart_tx_buff , "try no. %u success for %s\n" , try , at_command ) ;
-					send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+					//sprintf ( dbg_uart_tx_buff , "try no. %u success for %s\n" , try , at_command ) ;
+					//send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 					return 1 ;
 				}
 				else
@@ -545,53 +553,47 @@ uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 	return 0 ;
 }
-/*
-uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
+
+uint8_t m138_sleep ( unsigned int t )
 {
-	uint8_t try ;
-	uint8_t cs = nmea_checksum ( at_command , strlen ( at_command ) ) ;
-	int l ;
-
-	l = sprintf ( swarm_uart_tx_buff , "%s*%02x\n" , at_command , cs ) ;
-
-	for ( try = 0 ; try < 5 ; try++ )
+	sprintf ( (char*) sl_at_comm , "$SL S=%u" , t ) ;
+	if ( swarm_cc ( (const char*) sl_at_comm , sl_ok_answer ) )
 	{
-		tim_start () ;
-		if ( answer_from_swarm == 0 )
-			if ( receive_swarm_uart_dma () != HAL_OK )
-			{
-				sprintf ( dbg_uart_tx_buff , "try no. %u != HAL_OK for %s\n" , try , at_command ) ;
-				send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
-			}
-		send_string_2_swarm_uart ( swarm_uart_tx_buff , l ) ;
-		while ( tim_on )
-			if ( answer_from_swarm == 2 )
-			{
-				answer_from_swarm = 0 ;
-				sprintf ( dbg_uart_tx_buff , "try no. %u answer_from_swarm = 2 for %s\n" , try , at_command ) ;
-				send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
-				if ( strncmp ( swarm_uart_rx_buff , expected_answer , strlen ( expected_answer ) ) == 0 )
-				{
-					sprintf ( dbg_uart_tx_buff , "try no. %u success for %s\n" , try , at_command ) ;
-					send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
-					swarm_uart_rx_buff[0] = '\0' ;
-					return 1 ;
-				}
-				else
-				{
-					swarm_uart_rx_buff[0] = '\0' ;
-					break ;
-				}
-			}
-		clean_swarm_uart_rx_buff () ;
+		sprintf ( dbg_uart_tx_buff , "Swarm went sleep for 5.\n" ) ;
+		send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+		return 1 ;
 	}
-	sprintf ( dbg_uart_tx_buff , "%s %s\n" , (char*) expected_answer , "not received." ) ;
-	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 	return 0 ;
 }
+uint8_t m138_del_all_unsent	()
+{
+	if ( swarm_cc ( mt_del_all_unsent_at , mt_del_all_unsent_answer ) )
+		return 1 ;
+	else
+		return 0 ;
+}
+uint8_t m138_send_message ()
+{
+	sprintf ( dbg_uart_tx_buff , "$TD HD=60,\"%u;%s\"\n" , (unsigned int) m138_dev_id , m138_fix ) ;
+	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+	return 1;
+}
 
-*/
-void m138_init ()
+uint8_t m138_payload ()
+{
+	if ( swarm_cc ( pw_mostrecent_at , pw_mostrecent_answer ) )
+		if ( store_m138_voltage ( &m138_voltage , swarm_uart_rx_buff ) )
+			m138_payload_status_reg = m138_payload_status_reg | 1 ;
+	if ( swarm_cc ( gn_mostrecent_at , gn_mostrecent_answer ) )
+		if ( store_m138_fix ( m138_fix , swarm_uart_rx_buff ) )
+			m138_payload_status_reg = m138_payload_status_reg | 2 ;
+
+	sprintf ( dbg_uart_tx_buff , "%s%u\n" , "m138_payload_status_reg = " , m138_payload_status_reg ) ;
+	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+
+	return m138_payload_status_reg ;
+}
+uint8_t m138_init ()
 {
 	if ( swarm_cc ( cs_at , cs_answer ) )
 		if ( store_m138_dev_id ( &m138_dev_id , swarm_uart_rx_buff ) )
@@ -617,6 +619,8 @@ void m138_init ()
 
 	sprintf ( dbg_uart_tx_buff , "%s%u\n" , "m138_init_status_reg = " , m138_init_status_reg ) ;
 	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
+
+	return m138_init_status_reg ;
 }
 
 void clean_swarm_uart_rx_buff ()
