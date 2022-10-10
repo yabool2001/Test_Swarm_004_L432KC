@@ -191,7 +191,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   send_string_2_dbg_uart ( "Hello! Test_Swarm_004_L432KC started\n" ) ;
   send_string_2_dbg_uart ( "MCU WAIT 15s for Swarm boot\n" ) ;
-  //HAL_Delay ( 15000 ) ;
+  HAL_Delay ( 15000 ) ;
   tim_init () ;
   m138_init () ;
 
@@ -206,19 +206,23 @@ int main(void)
 	  if ( m138_payload () == 7 )
 		  if ( m138_send_message () )
 			  HAL_Delay ( 60000 ) ;
-	  m138_sleep ( 90 ) ;
+	  m138_sleep ( 3000 ) ;
 	  set_swarm_uart ( 0 ) ;
 	  //bkpt = 1 ;
 	  reset_m138_var () ;
-	  send_string_2_dbg_uart ( "MCU STOP for 120 s\n" ) ;
-	  //HAL_Delay ( 6000 ) ;
-	  HAL_PWREx_EnterSTOP0Mode ( PWR_STOPENTRY_WFI ) ;
+	  send_string_2_dbg_uart ( "MCU STOP for 3600 s\n" ) ;
+
+	  HAL_Delay ( 3600000 ) ;
+
 	  set_swarm_uart ( 1 ) ;
 	  send_string_2_dbg_uart ( "MCU WAKE UP\n" ) ;
 
+	  //HAL_PWR_EnterSLEEPMode ( PWR_MAINREGULATOR_ON , PWR_STOPENTRY_WFI ) ;
+	  //HAL_PWR_EnterSLEEPMode ( PWR_LOWPOWERREGULATOR_ON , PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP2Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP1Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP0Mode ( PWR_STOPENTRY_WFI ) ;
+	  //HAL_PWREx_EnterSHUTDOWNMode () ;
 
     /* USER CODE END WHILE */
 

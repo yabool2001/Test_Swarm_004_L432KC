@@ -2863,3 +2863,304 @@
 [2022-10-10 21:33:42.472] MCU WAIT 15s for Swarm boot
 [2022-10-10 21:33:43.341] m138_init_status_reg = 127
 [2022-10-10 21:33:44.003] m138_payload_status_reg = 7
+[2022-10-10 21:34:44.060] Swarm went sleep for 90 s
+[2022-10-10 21:34:44.063] MCU STOP for 120 s
+[2022-10-10 21:34:44.067] €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:35:36.806] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:35:37.604] m138_init_status_reg = 127
+[2022-10-10 21:35:38.267] m138_payload_status_reg = 7
+[2022-10-10 21:36:38.321] Swarm went sleep for 90 s
+[2022-10-10 21:36:38.321] MCU STOP for 120 s
+[2022-10-10 21:36:38.321] €€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€$CS DI=0x not received.
+[2022-10-10 21:39:22.271] try no. 0 != HAL_OK for $RT 0
+[2022-10-10 21:39:22.374] try no. 1 != HAL_OK for $RT 0
+[2022-10-10 21:39:24.366] try no. 2 != HAL_OK for $RT 0
+[2022-10-10 21:39:26.373] try no. 3 != HAL_OK for $RT 0
+[2022-10-10 21:39:28.370] try no. 4 != HAL_OK for $RT 0
+[2022-10-10 21:39:30.378] $RT OK*22 not received.
+[2022-10-10 21:39:30.378] try no. 0 != HAL_OK for $PW 0
+[2022-10-10 21:39:31.939] try no. 1 != HAL_OK for $PW 0
+[2022-10-10 21:39:32.382] try no. 2 != HAL_OK for $PW 0
+[2022-10-10 21:39:34.387] $PW OK*23 not received.
+[2022-10-10 21:39:34.848] m138_init_status_reg = 120
+[2022-10-10 21:39:35.571] m138_init_status_reg = 127
+[2022-10-10 21:39:44.385] $GN  not received.
+[2022-10-10 21:39:45.038] m138_payload_status_reg = 5
+[2022-10-10 21:39:45.074] $SL OK*3b not received.
+[2022-10-10 21:39:45.077] MCU STOP for 120 s
+[2022-10-10 21:40:16.557] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:40:16.557] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:40:18.388] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:40:18.388] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:40:34.463] m138_init_status_reg = 127
+[2022-10-10 21:40:43.773] $GN  not received.
+[2022-10-10 21:40:44.407] m138_payload_status_reg = 5
+[2022-10-10 21:40:44.423] $SL OK*3b not received.
+[2022-10-10 21:40:44.438] MCU STOP for 120 s
+[2022-10-10 21:41:56.123] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:41:56.123] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:41:57.947] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:41:57.947] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:42:13.927] m138_init_status_reg = 127
+[2022-10-10 21:42:23.257] $GN  not received.
+[2022-10-10 21:42:23.877] m138_payload_status_reg = 5
+[2022-10-10 21:42:23.908] $SL OK*3b not received.
+[2022-10-10 21:42:23.908] MCU STOP for 120 s
+[2022-10-10 21:42:23.908] MCU WAKE UP
+[2022-10-10 21:42:33.256] $GN  not received.
+[2022-10-10 21:42:33.889] m138_payload_status_reg = 5
+[2022-10-10 21:42:33.921] $SL OK*3b not received.
+[2022-10-10 21:42:33.921] MCU STOP for 120 s
+[2022-10-10 21:42:33.921] MCU WAKE UP
+[2022-10-10 21:42:43.273] $GN  not received.
+[2022-10-10 21:42:43.893] m138_payload_status_reg = 5
+[2022-10-10 21:42:43.925] $SL OK*3b not received.
+[2022-10-10 21:42:43.925] MCU STOP for 120 s
+[2022-10-10 21:42:43.925] MCU WAKE UP
+[2022-10-10 21:42:51.276] $GN  not received.
+[2022-10-10 21:42:53.317] m138_payload_status_reg = 5
+[2022-10-10 21:42:55.280] Swarm went sleep for 90 s
+[2022-10-10 21:42:55.280] MCU STOP for 120 s
+[2022-10-10 21:42:55.280] MCU WAKE UP
+[2022-10-10 21:43:01.281] $PW  not received.
+[2022-10-10 21:43:11.289] $GN  not received.
+[2022-10-10 21:43:13.002] $MT  not received.
+[2022-10-10 21:43:13.002] m138_payload_status_reg = 0
+[2022-10-10 21:43:15.003] $SL OK*3b not received.
+[2022-10-10 21:43:15.003] MCU STOP for 120 s
+[2022-10-10 21:43:15.003] MCU WAKE UP
+[2022-10-10 21:43:16.012] $PW  not received.
+[2022-10-10 21:43:16.028] try no. 0 != HAL_OK for $GN @
+[2022-10-10 21:43:17.287] try no. 1 != HAL_OK for $GN @
+[2022-10-10 21:43:19.291] try no. 2 != HAL_OK for $GN @
+[2022-10-10 21:43:21.301] try no. 3 != HAL_OK for $GN @
+[2022-10-10 21:43:23.298] try no. 4 != HAL_OK for $GN @
+[2022-10-10 21:43:25.292] $GN  not received.
+[2022-10-10 21:43:25.308] try no. 0 != HAL_OK for $MT D=U
+[2022-10-10 21:43:25.626] try no. 1 != HAL_OK for $MT D=U
+[2022-10-10 21:43:27.306] try no. 2 != HAL_OK for $MT D=U
+[2022-10-10 21:43:29.301] try no. 3 != HAL_OK for $MT D=U
+[2022-10-10 21:43:31.309] try no. 4 != HAL_OK for $MT D=U
+[2022-10-10 21:43:31.930] $MT  not received.
+[2022-10-10 21:43:31.930] m138_payload_status_reg = 0
+[2022-10-10 21:43:31.945] try no. 0 != HAL_OK for $SL S=90
+[2022-10-10 21:43:33.299] try no. 1 != HAL_OK for $SL S=90
+[2022-10-10 21:43:33.315] try no. 2 != HAL_OK for $SL S=90
+[2022-10-10 21:43:35.311] try no. 3 != HAL_OK for $SL S=90
+[2022-10-10 21:43:35.311] $SL OK*3b not received.
+[2022-10-10 21:43:35.311] MCU STOP for 120 s
+[2022-10-10 21:43:35.326] MCU WAKE UP
+[2022-10-10 21:43:45.305] $GN  not received.
+[2022-10-10 21:43:45.939] m138_payload_status_reg = 5
+[2022-10-10 21:43:45.971] $SL OK*3b not received.
+[2022-10-10 21:43:45.971] MCU STOP for 120 s
+[2022-10-10 21:43:45.971] MCU WAKE UP
+[2022-10-10 21:43:55.325] $GN  not received.
+[2022-10-10 21:43:55.944] m138_payload_status_reg = 5
+[2022-10-10 21:43:55.976] $SL OK*3b not received.
+[2022-10-10 21:43:55.976] MCU STOP for 120 s
+[2022-10-10 21:43:55.976] MCU WAKE UP
+[2022-10-10 21:44:05.329] $GN  not received.
+[2022-10-10 21:44:05.951] m138_payload_status_reg = 5
+[2022-10-10 21:44:05.982] $SL OK*3b not received.
+[2022-10-10 21:44:05.982] MCU STOP for 120 s
+[2022-10-10 21:44:05.982] MCU WAKE UP
+[2022-10-10 21:44:15.329] $GN  not received.
+[2022-10-10 21:44:15.965] m138_payload_status_reg = 5
+[2022-10-10 21:44:15.980] $SL OK*3b not received.
+[2022-10-10 21:44:15.980] MCU STOP for 120 s
+[2022-10-10 21:44:15.996] MCU WAKE UP
+[2022-10-10 21:44:25.346] $GN  not received.
+[2022-10-10 21:44:25.977] m138_payload_status_reg = 5
+[2022-10-10 21:44:25.993] $SL OK*3b not received.
+[2022-10-10 21:44:25.993] MCU STOP for 120 s
+[2022-10-10 21:44:25.993] MCU WAKE UP
+[2022-10-10 21:44:41.267] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:44:41.267] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:44:43.106] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:44:43.106] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:44:58.989] m138_init_status_reg = 127
+[2022-10-10 21:45:08.297] $GN  not received.
+[2022-10-10 21:45:08.926] m138_payload_status_reg = 5
+[2022-10-10 21:45:08.942] $SL OK*3b not received.
+[2022-10-10 21:45:08.958] MCU STOP for 120 s
+[2022-10-10 21:45:08.958] MCU WAKE UP
+[2022-10-10 21:45:18.308] $GN  not received.
+[2022-10-10 21:45:18.942] m138_payload_status_reg = 5
+[2022-10-10 21:45:18.958] $SL OK*3b not received.
+[2022-10-10 21:45:18.958] MCU STOP for 120 s
+[2022-10-10 21:45:18.958] MCU WAKE UP
+[2022-10-10 21:45:28.314] $GN  not received.
+[2022-10-10 21:45:28.942] m138_payload_status_reg = 5
+[2022-10-10 21:45:28.958] $SL OK*3b not received.
+[2022-10-10 21:45:28.973] MCU STOP for 120 s
+[2022-10-10 21:45:28.973] MCU WAKE UP
+[2022-10-10 21:45:38.312] $GN  not received.
+[2022-10-10 21:45:38.947] m138_payload_status_reg = 5
+[2022-10-10 21:45:38.963] $SL OK*3b not received.
+[2022-10-10 21:45:38.978] MCU STOP for 120 s
+[2022-10-10 21:45:38.978] MCU WAKE UP
+[2022-10-10 21:45:48.319] $GN  not received.
+[2022-10-10 21:45:48.956] m138_payload_status_reg = 5
+[2022-10-10 21:45:48.971] $SL OK*3b not received.
+[2022-10-10 21:45:48.987] MCU STOP for 120 s
+[2022-10-10 21:45:48.987] MCU WAKE UP
+[2022-10-10 21:45:56.327] $GN  not received.
+[2022-10-10 21:45:56.959] m138_payload_status_reg = 5
+[2022-10-10 21:45:56.975] Swarm went sleep for 90 s
+[2022-10-10 21:45:56.975] MCU STOP for 120 s
+[2022-10-10 21:45:56.975] MCU WAKE UP
+[2022-10-10 21:46:05.748] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:46:05.748] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:46:07.582] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:46:07.582] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:46:23.691] m138_init_status_reg = 127
+[2022-10-10 21:46:33.002] $GN  not received.
+[2022-10-10 21:46:33.623] m138_payload_status_reg = 5
+[2022-10-10 21:46:33.638] Swarm went sleep for 90 s
+[2022-10-10 21:46:33.638] MCU STOP for 120 s
+[2022-10-10 21:46:34.636] MCU WAKE UP
+[2022-10-10 21:46:41.004] $GN  not received.
+[2022-10-10 21:46:41.625] m138_payload_status_reg = 5
+[2022-10-10 21:46:41.641] Swarm went sleep for 90 s
+[2022-10-10 21:46:41.641] MCU STOP for 120 s
+[2022-10-10 21:46:42.636] MCU WAKE UP
+[2022-10-10 21:46:49.010] $GN  not received.
+[2022-10-10 21:46:49.644] m138_payload_status_reg = 5
+[2022-10-10 21:46:49.644] Swarm went sleep for 90 s
+[2022-10-10 21:46:49.644] MCU STOP for 120 s
+[2022-10-10 21:46:50.654] MCU WAKE UP
+[2022-10-10 21:46:57.017] $GN  not received.
+[2022-10-10 21:46:57.637] m138_payload_status_reg = 5
+[2022-10-10 21:46:57.653] Swarm went sleep for 90 s
+[2022-10-10 21:46:57.653] MCU STOP for 120 s
+[2022-10-10 21:46:58.649] MCU WAKE UP
+[2022-10-10 21:47:05.019] $GN  not received.
+[2022-10-10 21:47:05.652] m138_payload_status_reg = 5
+[2022-10-10 21:47:05.652] Swarm went sleep for 90 s
+[2022-10-10 21:47:05.652] MCU STOP for 120 s
+[2022-10-10 21:47:06.661] MCU WAKE UP
+[2022-10-10 21:47:13.029] $GN  not received.
+[2022-10-10 21:47:13.649] m138_payload_status_reg = 5
+[2022-10-10 21:47:13.665] Swarm went sleep for 90 s
+[2022-10-10 21:47:13.665] MCU STOP for 120 s
+[2022-10-10 21:47:14.662] MCU WAKE UP
+[2022-10-10 21:47:21.030] $GN  not received.
+[2022-10-10 21:47:21.666] m138_payload_status_reg = 5
+[2022-10-10 21:47:21.666] Swarm went sleep for 90 s
+[2022-10-10 21:47:21.666] MCU STOP for 120 s
+[2022-10-10 21:47:22.677] MCU WAKE UP
+[2022-10-10 21:47:29.033] $GN  not received.
+[2022-10-10 21:47:29.668] m138_payload_status_reg = 5
+[2022-10-10 21:47:29.683] Swarm went sleep for 90 s
+[2022-10-10 21:47:29.683] MCU STOP for 120 s
+[2022-10-10 21:47:30.680] MCU WAKE UP
+[2022-10-10 21:47:37.053] $GN  not received.
+[2022-10-10 21:47:37.682] m138_payload_status_reg = 5
+[2022-10-10 21:47:37.682] Swarm went sleep for 90 s
+[2022-10-10 21:47:37.682] MCU STOP for 120 s
+[2022-10-10 21:47:38.689] MCU WAKE UP
+[2022-10-10 21:47:45.046] $GN  not received.
+[2022-10-10 21:47:45.680] m138_payload_status_reg = 5
+[2022-10-10 21:47:45.680] Swarm went sleep for 90 s
+[2022-10-10 21:47:45.696] MCU STOP for 120 s
+[2022-10-10 21:47:46.686] MCU WAKE UP
+[2022-10-10 21:47:57.735] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:47:57.735] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:47:59.565] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:47:59.565] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:48:15.551] m138_init_status_reg = 127
+[2022-10-10 21:48:24.869] $GN  not received.
+[2022-10-10 21:48:25.504] m138_payload_status_reg = 5
+[2022-10-10 21:48:25.504] Swarm went sleep for 90 s
+[2022-10-10 21:48:25.504] MCU STOP for 120 s
+[2022-10-10 21:48:25.520] MCU WAKE UP
+[2022-10-10 21:48:34.872] $GN  not received.
+[2022-10-10 21:48:35.508] m138_payload_status_reg = 5
+[2022-10-10 21:48:35.508] Swarm went sleep for 90 s
+[2022-10-10 21:48:35.523] MCU STOP for 120 s
+[2022-10-10 21:48:35.523] MCU WAKE UP
+[2022-10-10 21:48:44.892] $GN  not received.
+[2022-10-10 21:48:45.510] m138_payload_status_reg = 5
+[2022-10-10 21:48:45.525] Swarm went sleep for 90 s
+[2022-10-10 21:48:45.525] MCU STOP for 120 s
+[2022-10-10 21:48:45.525] MCU WAKE UP
+[2022-10-10 21:48:54.889] $GN  not received.
+[2022-10-10 21:48:55.525] m138_payload_status_reg = 5
+[2022-10-10 21:48:55.525] Swarm went sleep for 90 s
+[2022-10-10 21:48:55.541] MCU STOP for 120 s
+[2022-10-10 21:48:55.541] MCU WAKE UP
+[2022-10-10 21:49:04.896] $GN  not received.
+[2022-10-10 21:49:05.530] m138_payload_status_reg = 5
+[2022-10-10 21:49:05.530] Swarm went sleep for 90 s
+[2022-10-10 21:49:05.546] MCU STOP for 120 s
+[2022-10-10 21:49:05.546] MCU WAKE UP
+[2022-10-10 21:49:14.911] $GN  not received.
+[2022-10-10 21:49:15.543] m138_payload_status_reg = 5
+[2022-10-10 21:49:15.543] Swarm went sleep for 90 s
+[2022-10-10 21:49:15.543] MCU STOP for 120 s
+[2022-10-10 21:49:15.543] MCU WAKE UP
+[2022-10-10 21:49:24.912] $GN  not received.
+[2022-10-10 21:49:25.552] m138_payload_status_reg = 5
+[2022-10-10 21:49:25.552] Swarm went sleep for 90 s
+[2022-10-10 21:49:25.552] MCU STOP for 120 s
+[2022-10-10 21:49:25.552] MCU WAKE UP
+[2022-10-10 21:49:34.930] $GN  not received.
+[2022-10-10 21:49:35.549] m138_payload_status_reg = 5
+[2022-10-10 21:49:35.565] Swarm went sleep for 90 s
+[2022-10-10 21:49:35.565] MCU STOP for 120 s
+[2022-10-10 21:49:35.565] MCU WAKE UP
+[2022-10-10 21:49:44.928] $GN  not received.
+[2022-10-10 21:49:45.565] m138_payload_status_reg = 5
+[2022-10-10 21:49:45.565] Swarm went sleep for 90 s
+[2022-10-10 21:49:45.565] MCU STOP for 120 s
+[2022-10-10 21:49:45.565] MCU WAKE UP
+[2022-10-10 21:49:58.321] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:49:58.321] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:50:00.151] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:50:00.151] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:50:13.903] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:50:13.903] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:50:15.731] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 21:50:15.731] MCU WAIT 15s for Swarm boot
+[2022-10-10 21:50:16.601] m138_init_status_reg = 127
+[2022-10-10 21:50:25.741] $GN  not received.
+[2022-10-10 21:50:26.377] m138_payload_status_reg = 5
+[2022-10-10 21:50:26.377] Swarm went sleep for 90 s
+[2022-10-10 21:50:26.377] MCU STOP for 120 s
+[2022-10-10 22:03:12.805] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:03:12.808] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:03:14.671] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:03:14.678] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:03:15.441] m138_init_status_reg = 127
+[2022-10-10 22:03:16.084] m138_payload_status_reg = 7
+[2022-10-10 22:04:16.298] Swarm went sleep for 90 s
+[2022-10-10 22:04:16.302] MCU STOP for 120 s
+[2022-10-10 22:09:43.676] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:09:43.676] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:09:45.503] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:09:45.510] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:09:46.378] m138_init_status_reg = 127
+[2022-10-10 22:09:47.040] m138_payload_status_reg = 7
+[2022-10-10 22:10:00.862] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:10:00.866] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:10:02.684] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:10:02.684] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:10:18.696] m138_init_status_reg = 127
+[2022-10-10 22:10:19.349] m138_payload_status_reg = 7
+[2022-10-10 22:11:19.408] Swarm went sleep for 60 s
+[2022-10-10 22:11:19.411] MCU STOP for 3600 s
+[2022-10-10 22:16:13.985] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:16:13.985] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:16:15.814] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:16:15.814] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:16:31.930] m138_init_status_reg = 127
+[2022-10-10 22:16:32.576] m138_payload_status_reg = 7
+[2022-10-10 22:16:50.374] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:16:50.374] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:16:52.210] Hello! Test_Swarm_004_L432KC started
+[2022-10-10 22:16:52.210] MCU WAIT 15s for Swarm boot
+[2022-10-10 22:17:08.211] m138_init_status_reg = 127
+[2022-10-10 22:17:08.847] m138_payload_status_reg = 7
+[2022-10-10 22:18:08.915] Swarm went sleep for 3000 s
+[2022-10-10 22:18:08.915] MCU STOP for 3600 s
