@@ -1,5 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
+ * v1.0.1 is great: https://github.com/yabool2001/Test_Swarm_004_L432KC/releases/tag/v1.0.1
+ * Aktualne logi do analizy: [2022-10-10 21:25:15.802] Hello! Test_Swarm_004_L432KC started
  * Actual: https://github.com/yabool2001/Test_Swarm_004_L432KC/issues/1
   ******************************************************************************
   * @file           : main.c
@@ -45,7 +47,7 @@
 #define SWARM_ANSWER_MAX_BUFF_SIZE		100
 #define SWARM_UART_TX_MAX_BUFF_SIZE		193
 #define DBG_UART_TX_MAX_BUFF_SIZE		200
-#define SWARM_TD_PAYLOAD_MAX_BUFF_SIZE	192
+#define SWARM_TD_MAX_BUFF_SIZE			205 // 192 + 13 = 205
 #define M138_INITIALISED				127
 /* USER CODE END PD */
 
@@ -66,14 +68,16 @@ DMA_HandleTypeDef hdma_usart1_rx;
 /* USER CODE BEGIN PV */
 char             						swarm_uart_rx_buff[SWARM_UART_RX_MAX_BUFF_SIZE] ;
 char             						swarm_uart_tx_buff[SWARM_UART_TX_MAX_BUFF_SIZE] ;
+char             						swarm_uart_tx_td_buff[SWARM_TD_MAX_BUFF_SIZE] ;
 char             						dbg_uart_tx_buff[DBG_UART_TX_MAX_BUFF_SIZE] ;
 uint8_t									tim_on = 0 ;
 uint8_t									answer_from_swarm = 0 ; // To jest bardzo ważne, bo 0 oznacza otwarty dma, którego nie można otwierać drugi raz, bo się zawiesi
 uint8_t									m138_init_status_reg = 0 ; // b0: dev_id, b1: rt rate=0, b2: pw rate = 0, b3: dt rate = 0, b4: gs rate = 0, b5: gj rate = 0, b6: gn rate = 0,
-uint8_t									m138_payload_status_reg = 0 ; // b0: pw, b1: gn ,
+uint8_t									m138_payload_status_reg = 0 ; // b0: pw, b1: gn , b2: mt=0,
 uint32_t								m138_dev_id = 0 ;
 float									m138_voltage = 0 ;
 char									m138_fix[50] ;
+char									quotation = 39 ;
 uint8_t									bkpt = 0 ;
 
 // SWARM AT Commands
@@ -111,7 +115,7 @@ const char*         gn_ok_answer				= "$GN OK*2d" ;
 const char*         gn_0_answer					= "$GN 0*19" ;
 const char*         gn_mostrecent_answer		= "$GN " ;
 const char*         mt_del_all_unsent_answer	= "$MT " ;
-const char*			td_ok_answer				= "$TD OK," ;
+const char*			td_ok_answer				= "$TD OK" ;
 const char*         sl_ok_answer				= "$SL OK*3b" ;
 const char*         sl_wake_answer				= "$SL WAKE" ;
 /* USER CODE END PV */
@@ -186,6 +190,8 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   send_string_2_dbg_uart ( "Hello! Test_Swarm_004_L432KC started\n" ) ;
+  send_string_2_dbg_uart ( "MCU WAIT 15s for Swarm boot\n" ) ;
+  //HAL_Delay ( 15000 ) ;
   tim_init () ;
   m138_init () ;
 
@@ -197,15 +203,18 @@ int main(void)
   {
 	  if ( m138_init_status_reg != M138_INITIALISED )
 		  m138_init () ;
-	  if ( m138_payload () == 3 )
-		  if ( m138_del_all_unsent () )
-			  m138_send_message () ;
-	  m138_sleep ( 5 ) ;
+	  if ( m138_payload () == 7 )
+		  if ( m138_send_message () )
+			  HAL_Delay ( 60000 ) ;
+	  m138_sleep ( 90 ) ;
 	  set_swarm_uart ( 0 ) ;
 	  //bkpt = 1 ;
 	  reset_m138_var () ;
-	  HAL_Delay ( 6000 ) ;
+	  send_string_2_dbg_uart ( "MCU STOP for 120 s\n" ) ;
+	  //HAL_Delay ( 6000 ) ;
+	  HAL_PWREx_EnterSTOP0Mode ( PWR_STOPENTRY_WFI ) ;
 	  set_swarm_uart ( 1 ) ;
+	  send_string_2_dbg_uart ( "MCU WAKE UP\n" ) ;
 
 	  //HAL_PWREx_EnterSTOP2Mode ( PWR_STOPENTRY_WFI ) ;
 	  //HAL_PWREx_EnterSTOP1Mode ( PWR_STOPENTRY_WFI ) ;
@@ -334,7 +343,7 @@ static void MX_TIM6_Init(void)
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 32000-1;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 10000-1;
+  htim6.Init.Period = 2000-1;
   htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
@@ -533,6 +542,8 @@ uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 		while ( tim_on )
 			if ( answer_from_swarm == 2 )
 			{
+				if ( strncmp ( td_ok_answer , expected_answer , strlen ( expected_answer ) ) == 0 )
+					__NOP () ;
 				answer_from_swarm = 0 ;
 				//sprintf ( dbg_uart_tx_buff , "try no. %u answer_from_swarm = 2 for %s\n" , try , at_command ) ;
 				//send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
@@ -557,9 +568,10 @@ uint8_t swarm_cc ( const char* at_command , const char* expected_answer )
 uint8_t m138_sleep ( unsigned int t )
 {
 	sprintf ( (char*) sl_at_comm , "$SL S=%u" , t ) ;
+	//send_string_2_dbg_uart ( (char*) sl_at_comm ) ;
 	if ( swarm_cc ( (const char*) sl_at_comm , sl_ok_answer ) )
 	{
-		sprintf ( dbg_uart_tx_buff , "Swarm went sleep for 5.\n" ) ;
+		sprintf ( dbg_uart_tx_buff , "Swarm went sleep for %u s\n" , t ) ;
 		send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
 		return 1 ;
 	}
@@ -574,9 +586,16 @@ uint8_t m138_del_all_unsent	()
 }
 uint8_t m138_send_message ()
 {
-	sprintf ( dbg_uart_tx_buff , "$TD HD=60,\"%u;%s\"\n" , (unsigned int) m138_dev_id , m138_fix ) ;
-	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
-	return 1;
+	sprintf ( swarm_uart_tx_td_buff , "$TD HD=60,%c%u;%s%c" , quotation,  (unsigned int) m138_dev_id , m138_fix , quotation ) ;
+	//send_string_2_dbg_uart ( swarm_uart_tx_td_buff ) ;
+	if ( swarm_cc ( swarm_uart_tx_td_buff , td_ok_answer ) )
+	{
+		receive_swarm_uart_dma () ;
+		return 1 ;
+	}
+	else
+		return 0 ;
+	//return 1 ;
 }
 
 uint8_t m138_payload ()
@@ -587,6 +606,8 @@ uint8_t m138_payload ()
 	if ( swarm_cc ( gn_mostrecent_at , gn_mostrecent_answer ) )
 		if ( store_m138_fix ( m138_fix , swarm_uart_rx_buff ) )
 			m138_payload_status_reg = m138_payload_status_reg | 2 ;
+	if ( m138_del_all_unsent () )
+		m138_payload_status_reg = m138_payload_status_reg | 4 ;
 
 	sprintf ( dbg_uart_tx_buff , "%s%u\n" , "m138_payload_status_reg = " , m138_payload_status_reg ) ;
 	send_string_2_dbg_uart ( dbg_uart_tx_buff ) ;
