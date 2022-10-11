@@ -1,0 +1,7 @@
+
+[2022-10-11 21:13:51.422] Swarm went sleep for 3000 s
+[2022-10-11 21:13:51.422] MCU STOP for 3600 s
+[2022-10-11 22:13:54.896] MCU WAKE UP
+[2022-10-11 22:13:55.552] m138_payload_status_reg = 7
+[2022-10-11 22:14:55.610] Swarm went sleep for 3000 s
+[2022-10-11 22:14:55.610] MCU STOP for 3600 s
